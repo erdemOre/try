@@ -22,7 +22,7 @@ public class LogoutStepDefs {
 
     @Then("user should ends up the {string} page")
     public void user_should_ends_up_the_page(String expectedPage) {
-        new DashboardPage().waitUntilLoaderMaskDisappear();
+        BrowserUtils.waitFor(2);
         Assert.assertEquals("Page titles are not same",expectedPage,Driver.get().getTitle());
     }
 

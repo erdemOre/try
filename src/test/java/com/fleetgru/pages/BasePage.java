@@ -66,6 +66,7 @@ public abstract class BasePage {
     public WebElement myUserName;
 
     public void logOut(){
+        waitUntilLoaderMaskDisappear();
         BrowserUtils.waitForClickablility(By.id("user-menu"),10);
         Driver.get().findElement(By.id("user-menu")).click();
         Driver.get().findElement(By.linkText("Logout")).click();
