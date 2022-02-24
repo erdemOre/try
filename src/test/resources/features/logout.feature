@@ -1,4 +1,4 @@
-@wip
+@logout
 Feature: Logout function
 
   Background: User logged in
